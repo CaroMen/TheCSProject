@@ -1,50 +1,119 @@
 body {
-    background-color: darkslategray;
+    background-color: #FBFBFE;
 }
 
-.array-bar {
-    /* position: absolute;
-    left: 100px;
-    right: 100px;
-    top: 100px; */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 30px;
 }
 
 .array-container {
     position: absolute;
     left: 100px;
-    right: 100px;
+    /* right: 100px; */
     /* margin: 50px; */
-    top: 100px;
+    padding-top: 100px;
+}
 
+.title {
+    font-size: 50px;
+    /* font-style: oblique; */
+    color: #AA71FF;
 }
 
 .array-bar {
-    /* width: 4px;
-    background-color: mediumslateblue;
-    display: inline-block;
-    margin: 0 1px; */
     width: 10px;
     height: 30px;
-    background-color: lightcoral;
+    background-color: #AA71FF;
     display: inline-block;
     margin: 0 5px;
 }
 
-.sorting-button {
+.bubble-button {
     width: 200px;
     height: 30px;
-    background-color: lightcoral;
+    background-color: #4179BC;
     display: inline-block;
-    position: relative;
+    color: #FBFBFE;
     top: 30px;
     left: -400px;
     border-radius: 10px;
     outline: none;
     border: none;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
-.sorting-button:focus {
+.reset-button {
+    width: 200px;
+    height: 30px;
+    background-color: #FD817D;
+    display: inline-block;
+    color: #FBFBFE;
+    top: 30px;
+    left: -400px;
+    border-radius: 10px;
     outline: none;
-    box-shadow: none;
+    border: none;
+    margin-right: 10px;
+}
+
+.insert-button {
+    width: 200px;
+    height: 30px;
+    background-color: #4179BC;
+    display: inline-block;
+    color: #FBFBFE;
+    top: 30px;
+    left: -400px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+}
+
+.selection-button {
+    width: 200px;
+    height: 30px;
+    background-color: #4179BC;
+    display: inline-block;
+    color: #FBFBFE;
+    top: 30px;
+    left: -400px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+}
+
+.buttons {
+    align-content: center;
+    margin: 10px auto;
+}
+
+.analysis {
+    vertical-align: middle;
+    width: 70%;
+    padding-top: 70px;
+    /* margin-bottom: 30px; */
+}
+
+.algo {
+    height: 30px;
+    background-color: #4179BC;
+    color: #FBFBFE;
+    top: 30px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.time {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.space {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
