@@ -2,6 +2,8 @@ import React from 'react';
 import { bubbleSortAnimation } from '../algorithms/bubbleSort/bubbleSort';
 import { getInsertionSort } from '../algorithms/insertionSort/insertionSort.js';
 import { getSelectionSort } from '../algorithms/selectionSort/selectionSort';
+import { getMergeSort } from '../algorithms/mergseSort/mergeSort';
+import { getQuickSort } from '../algorithms/quickSort/quickSort';
 
 import '../SortingVisualizer/Sorter.css'
 
@@ -24,8 +26,6 @@ export default class SortingVisualizer extends React.Component {
         this.setState({
             showAnalysis: boolean
         });
-        // this.bubbleSort();
-        // this.props.onClick();
     }
 
     arrayReset() {
@@ -38,7 +38,6 @@ export default class SortingVisualizer extends React.Component {
 
     bubbleSort() {
         const animations = bubbleSortAnimation(this.state.array);
-        console.log(animations);
 
         for (let i = 0; i < animations.length; i++) {
             const bars = document.getElementsByClassName('array-bar');
@@ -52,13 +51,13 @@ export default class SortingVisualizer extends React.Component {
                 setTimeout(() => {
                     barOneStyle.backgroundColor = color;
                     barTwoStyle.backgroundColor = color;
-                }, i * 2);
+                }, i * 8);
             } else {
                 setTimeout(() => {
                     let [barOneIdx, height] = animations[i];
                     let barOneStyle = bars[barOneIdx].style;
                     barOneStyle.height = `${height}px`;
-                }, i * 2);
+                }, i * 8);
             }
 
         }
@@ -79,16 +78,18 @@ export default class SortingVisualizer extends React.Component {
                 setTimeout(() => {
                     barOneStyle.backgroundColor = color;
                     barTwoStyle.backgroundColor = color;
-                }, i * 2);
+                }, i * 8);
             } else {
                 setTimeout(() => {
                     let [barOneIdx, height] = animations[i];
                     let barOneStyle = bars[barOneIdx].style;
                     barOneStyle.height = `${height}px`;
-                }, i * 2);
+                }, i * 8);
             }
         }
     }
+
+
 
     selectionSort() {
         const animations = getSelectionSort(this.state.array);
@@ -104,22 +105,65 @@ export default class SortingVisualizer extends React.Component {
                 setTimeout(() => {
                     barOneStyle.backgroundColor = color;
                     barTwoStyle.backgroundColor = color;
-                }, i * 2);
+                }, i * 8);
             } else {
                 setTimeout(() => {
                     let [barOneIdx, height] = animations[i];
                     let barOneStyle = bars[barOneIdx].style;
                     barOneStyle.height = `${height}px`;
-                }, i * 2);
+                }, i * 8);
             }
         }
     }
 
-    // bubbleSortWrapper = () => {
-    //     this.showAnalysis.bind(null, true);
-    //     { this.state.showAnalysis && (<div>Shit shet</div>) }
-    //     this.bubbleSort();
-    // }
+    mergeSort() {
+        const animations = getMergeSort(this.state.array);
+        for (let i = 0; i < animations.length; i++) {
+            const bars = document.getElementsByClassName('array-bar');
+            let colorChanged = i % 3 !== 2;
+            if (colorChanged) {
+                let [barOneIdx, barTwoIdx] = animations[i];
+                let barOneStyle = bars[barOneIdx].style;
+                let barTwoStyle = bars[barTwoIdx].style;
+                const color = i % 3 === 0 ? '#C55B83' : '#AA71FF';
+
+                setTimeout(() => {
+                    barOneStyle.backgroundColor = color;
+                    barTwoStyle.backgroundColor = color;
+                }, i * 8);
+            } else {
+                setTimeout(() => {
+                    let [barOneIdx, height] = animations[i];
+                    let barOneStyle = bars[barOneIdx].style;
+                    barOneStyle.height = `${height}px`;
+                }, i * 8);
+            }
+        }
+    }
+
+    quickSort() {
+        const animatingArray = getQuickSort(this.state.array);
+        for (let i = 0; i < animatingArray.length; i++) {
+            let arrayBars = document.getElementsByClassName('array-bar');
+            const colorChange = i % 4 <= 1;
+            if (colorChange) {
+                const [barOneIdx, barTwoIdx] = animatingArray[i];
+                const barOneStyle = arrayBars[barOneIdx].style;
+                const barTwoStyle = arrayBars[barTwoIdx].style;
+                const color = i % 4 === 0 ? '#C55B83' : '#AA71FF';
+                setTimeout(() => {
+                    barOneStyle.backgroundColor = color;
+                    barTwoStyle.backgroundColor = color;
+                }, i * 8);
+            } else {
+                setTimeout(() => {
+                    const [barOneIdx, newHeight] = animatingArray[i];
+                    const barOneStyle = arrayBars[barOneIdx].style;
+                    barOneStyle.height = `${newHeight}px`;
+                }, i * 8);
+            }
+        }
+    }
 
     render() {
         const { array } = this.state;
@@ -139,20 +183,28 @@ export default class SortingVisualizer extends React.Component {
                     <div className="buttons">
                         <button className="reset-button" onClick={() => this.arrayReset()}>Generate New Array</button>
                         <button className="bubble-button" onClick={() => this.bubbleSort()}>Bubble Sort</button>
-                        <button className="insert-button" onClick={() => this.insertSort()}>Insert Sort</button>
+                        <button className="insert-button" onClick={() => this.insertSort()}>Insertion Sort</button>
                         <button className="selection-button" onClick={() => this.selectionSort()}>Selection Sort</button>
+                        <button className="merge-button" onClick={() => this.mergeSort()}>Merge Sort</button>
+                        <button className="quick-button" onClick={() => this.quickSort()}>Quick Sort</button>
                     </div>
                 </div>
                 <div className="analysis">
                     <div className="algo">Bubble Sort Analysis</div>
                     <div className="time">Time Complexity: O(n²)</div>
                     <div className="space">Space Complexity: O(1)</div>
-                    <div className="algo">Insert Sort Analysis</div>
+                    <div className="algo">Insertion Sort Analysis</div>
                     <div className="time">Time Complexity: O(n²)</div>
                     <div className="space">Space Complexity: O(1)</div>
                     <div className="algo">Selection Sort Analysis</div>
                     <div className="time">Time Complexity: O(n²)</div>
                     <div className="space">Space Complexity: O(1)</div>
+                    <div className="algo">Merge Sort Analysis</div>
+                    <div className="time">Time Complexity: O(nlogn)</div>
+                    <div className="space">Space Complexity: O(n)</div>
+                    <div className="algo">Selection Sort Analysis</div>
+                    <div className="time">Time Complexity: O(n²)</div>
+                    <div className="space">Space Complexity: O(n)</div>
                 </div>
 
             </div>
