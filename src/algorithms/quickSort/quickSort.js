@@ -14,7 +14,6 @@ function quickSort(arr, start, end, animations) {
 }
 
 function divide(arr, start, end, animations) {
-
     let pivot = arr[start];
     let isTrue = true;
     let min = start + 1;
@@ -51,7 +50,7 @@ function divide(arr, start, end, animations) {
     animations.push([start, arr[end]]);
     animations.push([end, pivot]);
     let temp = arr[end];
-    arr[min] = pivot;
+    arr[end] = pivot;
     arr[start] = temp;
     return end;
 
