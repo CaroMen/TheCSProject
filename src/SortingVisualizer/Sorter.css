@@ -146,3 +146,138 @@ body {
     margin-top: 10px;
     margin-bottom: 30px;
 }
+
+/* @media (max-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding-top: 30px;
+        max-width: 100%;
+    }
+
+    .array-bar {
+        width: 8px;
+        height: 5px;
+        background-color: #AA71FF;
+        display: inline-block;
+        margin: 1px;
+    }
+
+    .array-container {
+        margin: 0 auto;
+        width: 50%;
+        margin-left: 200px;
+    }
+
+    .title {
+        font-size: 40px;
+        color: #AA71FF;
+    }
+
+    .buttons {
+        display: inline-block;
+        align-content: center;
+        margin: 10px -10px auto -10px;
+        max-width: 100%;
+    }
+
+    .analysis {
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 140px;
+        /* margin-left: 180px; */
+    /* } */
+
+/* } */
+
+
+@media screen and (max-width: 1400px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "graph analysis";
+    }
+
+    .array-bar {
+        width: 10px;
+        height: 5px;
+        background-color: #AA71FF;
+        display: inline-block;
+        margin: 1px;
+    }
+
+    .array-container {
+        grid-area: graph;
+        /* width: 30%; */
+        /* margin: 0 auto; */
+    }
+
+    .title {
+        font-size: 40px;
+        color: #AA71FF;
+        padding-left: 50%;
+        /* grid-area: graph; */
+    }
+
+    .buttons {
+        /* display: inline-block; */
+        /* align-content: center; */
+        /* margin: 10px -10px auto -10px; */
+        max-width: 100%;
+    }
+
+    .analysis {
+        grid-area: analysis;
+        width: 50%;
+        margin: 0 auto;
+        /* padding-top: 140px; */
+        padding-left: 180px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "graph analysis";
+    }
+
+    .array-bar {
+        width: 10px;
+        height: 5px;
+        background-color: #AA71FF;
+        display: inline-block;
+        margin: 1px;
+    }
+
+    .array-container {
+        grid-area: graph;
+        width: 60%;
+        /* margin: 0 auto; */
+    }
+
+    .title {
+        font-size: 40px;
+        color: #AA71FF;
+        padding-left: 50%;
+        /* padding-left: 340px; */
+        /* grid-area: graph; */
+    }
+
+    .buttons {
+        /* display: inline-block; */
+        /* align-content: center; */
+        /* margin: 10px -10px auto -10px; */
+        max-width: 100%;
+    }
+
+    .analysis {
+        grid-area: analysis;
+        width: 50%;
+        margin: 0 auto;
+        /* padding-top: 140px; */
+        padding-left: 180px;
+    }
+}
