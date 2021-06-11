@@ -15,7 +15,22 @@ export const bubbleSort = (arr, animations = []) => {
                 // animates the swap
                 animations.push([[i, pointerB], [i + 1, pointerA]]);
                 animations.push()
+
+                swap(arr, i, i + 1);
+                isSorted = false;
+            } else {
+                animations.push([[i, pointerA], [i + 1, pointerB]]);
+                animations.push([i, i + 1]);
             }
         }
+        counter++;
     }
+    return animations;
+}
+
+
+let swap = (arr, i, j) => {
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
 }
