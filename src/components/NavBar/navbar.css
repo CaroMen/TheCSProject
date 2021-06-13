@@ -1,0 +1,19 @@
+html, body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-outer {
+
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link {
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: #2E3630;
+    font-size: 18px;
+}
