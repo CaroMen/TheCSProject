@@ -1,11 +1,12 @@
-export const animator = (animation) => {
-    let bars = document.getElementsByClassName('bar');
+const animator = (animation) => {
+    let bars = document.getElementsByClassName('array-bar');
 
     for (let i = 0; i < animation.length; i++) {
         const isColorChange = i % 3 === 0 || i % 3 === 2;
 
         if (isColorChange) {
             const [barOneIdx, barTwoIdx] = animation[i];
+
             const barOneStyle = bars[barOneIdx].style;
             const barTwoStyle = bars[barTwoIdx].style;
 
@@ -17,10 +18,16 @@ export const animator = (animation) => {
             }, i * 300);
         } else {
             setTimeout(() => {
-                const [barOneIdx, newHeight] = animation[i];
+                const [[barOneIdx, barOneHeight], [barTwoIdx, barTwoHeight]] = animation[i];
+
                 const barOneStyle = bars[barOneIdx].style;
-                barOneStyle.height = `${newHeight}px`;
-            })
+                const barTwoStyle = bars[barTwoIdx].style;
+
+                barOneStyle.height = `${barOneHeight}px`;
+                barTwoStyle.height = `${barTwoHeight}px`;
+            }, i * 300)
         }
     }
 }
+
+export default animator;

@@ -4,23 +4,26 @@ export const bubbleSort = (arr, animations = []) => {
     while (!isSorted) {
         isSorted = true;
 
-        for (let i = 0; i < arr.length - 1 - counter; i++) {
-            let pointerA = arr[i];
-            let pointerB = arr[i + 1];
+        for (let i = 0; i < arr.length - counter; i++) {
+            let pointerA = i;
+            let pointerB = i + 1;
 
             // first animation, grab the first two we'll change the color of
             animations.push([pointerA, pointerB]);
 
-            if (pointerA > pointerB) {
+            if (arr[i] > arr[i + 1]) {
                 // animates the swap
-                animations.push([[i, pointerB], [i + 1, pointerA]]);
-                animations.push()
+                animations.push([
+                    [i, arr[i + 1]],
+                    [i + 1, arr[i]],
+                ]);
+                animations.push([pointerA, pointerB]);
 
-                swap(arr, i, i + 1);
+                swap(arr, pointerA, pointerB);
                 isSorted = false;
             } else {
-                animations.push([[i, pointerA], [i + 1, pointerB]]);
-                animations.push([i, i + 1]);
+                animations.push([[pointerA, arr[i]], [pointerB, arr[i + 1]]]);
+                animations.push([pointerA, pointerB]);
             }
         }
         counter++;

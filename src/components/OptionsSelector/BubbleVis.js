@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { bubbleSort } from "../Algorithms/BubbleSort"
-import { animator } from '../../animator';
+import animator from '../../animator';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
@@ -14,17 +14,18 @@ const BubbleVis = () => {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
-    let barHeight = [];
+    let array = [];
     for (let i = 0; i < arr.length; i++) {
-        barHeight.push(randomNum(5, 200));
+        array.push(randomNum(5, 200));
     }
 
     const bubbleSorter = (e) => {
         setBtnSelected(e.target);
         setTimeout(() => {
             const animations = bubbleSort(arr.slice());
+            console.log('butthole', animations);
             animator(animations);
-        })
+        }, 300)
     }
 
     return (
@@ -38,8 +39,7 @@ const BubbleVis = () => {
                 ></Slider>
             </div>
             <div>
-                {console.log('arr', arr)}
-                {barHeight.map((val, i) => (
+                {array.map((val, i) => (
                     <div className="array-bar" key={i} style={{ height: `${val}px`, backgroundColor: 'blueviolet' }}></div>
                 ))}
             </div>
