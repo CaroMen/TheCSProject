@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route to={`/bubble-sort`}>
+        <Route exact path="/bubble-sort">
           <BubbleVis />
         </Route>
       </Switch>
