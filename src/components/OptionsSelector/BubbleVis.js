@@ -33,7 +33,14 @@ const BubbleVis = () => {
                 <h3 className="sort-title">Bubble Sort</h3>
                 <div className="bubble-desc">This sort algorithm is pretty simple. It will compare two items that are side by side and sees which one is out of place.</div>
 
-                <div className="bubble-desc">It will start out with the first two numbers and it will check which one is greater. Once that is decided, the greatest number will be swapped with the smallest number of the two. </div>
+                <div className="bubble-desc">It will start out with the first two numbers and it will check which one is greater. Once that is decided, the greatest number will be swapped with the smallest number of the two.</div>
+
+                <div className="complexity-desc">
+                    <div className="complexity">Time Complexity:</div>
+                    <div className="complexity-ans">O(n^2)</div>
+                    <div className="space-complexity">Space Complexity:</div>
+                    <div className="complexity-ans">O(1)</div>
+                </div>
             </div>
             <div className="select-size">
                 <label>Choose array size to display the sorting visualizer:</label>
