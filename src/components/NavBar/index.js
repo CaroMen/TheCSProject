@@ -24,7 +24,7 @@ const NavBar = () => {
                             </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel>
-                            <NavLink className="nav-link" to="/bubble-sort">Bubble Sort Visualizer</NavLink>
+                            <NavLink className="nav-link bubble-sort" to="/bubble-sort">Bubble Sort Visualizer</NavLink>
                         </AccordionItemPanel>
                         <AccordionItemPanel>
                             <NavLink className="nav-link" to="/insertion-sort">Insertion Sort Visualizer</NavLink>

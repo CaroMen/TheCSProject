@@ -27,3 +27,8 @@ html, body {
     font-size: 16px;
     margin-left: 40px;
 }
+
+.bubble-sort:hover {
+    border-left: 2px solid #c2b0be;
+    padding-right: 20px;
+}
