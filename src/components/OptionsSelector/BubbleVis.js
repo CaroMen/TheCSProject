@@ -34,7 +34,7 @@ const BubbleVis = () => {
                 <Slider
                     onChange={(val) => setArr([...arr, val])}
                     min={5}
-                    high={80}
+                    max={35}
                 ></Slider>
             </div>
             <div>
