@@ -22,12 +22,7 @@ const BubbleVis = () => {
             <div className="select-size">
                 <label>Choose Array Size</label>
                 <Slider
-                    onChange={(val) => {
-
-                        console.log('val', val)
-                        setArr(val);
-                    }}
-                    // value={5}
+                    onChange={(val) => setArr([...arr, val])}
                     min={5}
                     high={80}
                 ></Slider>
