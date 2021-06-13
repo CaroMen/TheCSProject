@@ -13,11 +13,9 @@ const BubbleVis = () => {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
-    const setBarHeight = () => {
-        let barHeight = [];
-        for (let i = 0; i < arr.length; i++) {
-            barHeight.push(randomNum(5, 200));
-        }
+    let barHeight = [];
+    for (let i = 0; i < arr.length; i++) {
+        barHeight.push(randomNum(5, 200));
     }
 
     const bubbleSorter = (e) => {
@@ -27,6 +25,8 @@ const BubbleVis = () => {
             animator(animations);
         })
     }
+
+    console.log('butthole', barHeight);
 
     return (
         <div>
@@ -40,11 +40,11 @@ const BubbleVis = () => {
             </div>
             <div>
                 {console.log('arr', arr)}
-                {/* {arr.map((val, i) => (
+                {barHeight.map((val, i) => (
                     <div>
-                        {console.log('butthole', val)}
+                        {/* {console.log('butthole', val)} */}
                     </div>
-                ))} */}
+                ))}
             </div>
             <div onClick={(e) => bubbleSorter(e)}>Bubble Sort</div>
         </div>
