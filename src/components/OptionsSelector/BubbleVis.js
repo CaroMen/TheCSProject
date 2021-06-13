@@ -27,7 +27,7 @@ const BubbleVis = () => {
                         console.log('val', val)
                         setArr(val);
                     }}
-                    value={5}
+                    // value={5}
                     min={5}
                     high={80}
                 ></Slider>
