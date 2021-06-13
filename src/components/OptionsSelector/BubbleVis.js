@@ -39,7 +39,7 @@ const BubbleVis = () => {
             </div>
             <div>
                 {array.map((val, i) => (
-                    <div className="array-bar" key={i} style={{ height: `${val}px`, backgroundColor: '#5de6de' }}></div>
+                    <div className="array-bar" key={i} style={{ height: `${val}px`, backgroundColor: '#a0a59e' }}></div>
                 ))}
             </div>
             <div onClick={(e) => bubbleSorter(e)}>Bubble Sort</div>

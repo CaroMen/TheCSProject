@@ -10,12 +10,12 @@ const animator = (animation) => {
             const barOneStyle = bars[barOneIdx].style;
             const barTwoStyle = bars[barTwoIdx].style;
 
-            const color = i % 3 !== 0 ? '#b58ec' : '#5de6de';
+            const color = i % 3 === 0 ? '#9b616d' : '#a0a59e';
 
             setTimeout(() => {
                 barOneStyle.backgroundColor = color;
                 barTwoStyle.backgroundColor = color;
-            }, i * 30);
+            }, i * 100);
         } else {
             setTimeout(() => {
                 const [[barOneIdx, barOneHeight], [barTwoIdx, barTwoHeight]] = animation[i];
@@ -25,7 +25,7 @@ const animator = (animation) => {
 
                 barOneStyle.height = `${barOneHeight}px`;
                 barTwoStyle.height = `${barTwoHeight}px`;
-            }, i * 30)
+            }, i * 100)
         }
     }
 }
