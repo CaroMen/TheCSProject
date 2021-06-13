@@ -22,8 +22,7 @@ const BubbleVis = () => {
     const bubbleSorter = (e) => {
         setBtnSelected(e.target);
         setTimeout(() => {
-            const animations = bubbleSort(arr.slice());
-            console.log('butthole', animations);
+            const animations = bubbleSort(array.slice());
             animator(animations);
         }, 300)
     }
@@ -40,7 +39,7 @@ const BubbleVis = () => {
             </div>
             <div>
                 {array.map((val, i) => (
-                    <div className="array-bar" key={i} style={{ height: `${val}px`, backgroundColor: 'blueviolet' }}></div>
+                    <div className="array-bar" key={i} style={{ height: `${val}px`, backgroundColor: '#5de6de' }}></div>
                 ))}
             </div>
             <div onClick={(e) => bubbleSorter(e)}>Bubble Sort</div>
