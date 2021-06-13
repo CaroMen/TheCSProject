@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { bubbleSort } from "../Algorithms/BubbleSort"
 import { animator } from '../../animator';
 
-let Selector = () => {
+const BubbleVis = () => {
     const [arr, setArr] = useState([]);
     const [btnSelected, setBtnSelected] = useState();
 
@@ -16,9 +16,23 @@ let Selector = () => {
 
     return (
         <div>
+            <div className="select-size">
+                <label>Choose Array Size</label>
+                <input
+                    type="range"
+                    min="5"
+                    high="80"
+                    step="2"
+                ></input>
+            </div>
+            <div>
+                {arr.map((val, i) => (
+                    <div></div>
+                ))}
+            </div>
             <div onClick={(e) => bubbleSorter(e)}>Bubble Sort</div>
         </div>
     )
 }
 
-export default Selector
+export default BubbleVis

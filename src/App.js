@@ -1,6 +1,5 @@
 import React from 'react';
-import Selector from './components/OptionsSelector';
-import Sorter from './components/Visualizer';
+import BubbleVis from './components/OptionsSelector/BubbleVis';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -9,8 +8,8 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route to={`/:algo`}>
-          <Selector />
+        <Route to={`/bubble-sort`}>
+          <BubbleVis />
         </Route>
       </Switch>
     </BrowserRouter>
