@@ -7,7 +7,8 @@
 }
 
 .array-bar {
-    display: flex;
+    display: inline-block;
+    /* flex-direction: row; */
     margin: 0px 3px;
-
+    width: 10px;
 }

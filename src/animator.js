@@ -19,7 +19,7 @@ export const animator = (animation) => {
             setTimeout(() => {
                 const [barOneIdx, newHeight] = animation[i];
                 const barOneStyle = bars[barOneIdx].style;
-                barOneStyle.width = `${newHeight}px`;
+                barOneStyle.height = `${newHeight}px`;
             })
         }
     }
