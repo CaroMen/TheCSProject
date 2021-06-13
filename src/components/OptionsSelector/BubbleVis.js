@@ -9,6 +9,17 @@ const BubbleVis = () => {
     const [arr, setArr] = useState([]);
     const [btnSelected, setBtnSelected] = useState();
 
+    const randomNum = (min, max) => {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    const setBarHeight = () => {
+        let barHeight = [];
+        for (let i = 0; i < arr.length; i++) {
+            barHeight.push(randomNum(5, 200));
+        }
+    }
+
     const bubbleSorter = (e) => {
         setBtnSelected(e.target);
         setTimeout(() => {
