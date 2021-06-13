@@ -1,10 +1,10 @@
 import React from 'react';
-import Sorter from './Visualizer';
+import Selector from './components/OptionsSelector';
+import Sorter from './components/Visualizer';
 
 function App() {
   return (
     <div className="App" >
-      <Sorter />
     </div>
   );
 }
