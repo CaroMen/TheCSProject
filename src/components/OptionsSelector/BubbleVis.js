@@ -4,6 +4,7 @@ import { animator } from '../../animator';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
+import './visualizer.css';
 
 const BubbleVis = () => {
     const [arr, setArr] = useState([]);
@@ -26,10 +27,8 @@ const BubbleVis = () => {
         })
     }
 
-    console.log('butthole', barHeight);
-
     return (
-        <div>
+        <div className="visualizer-container">
             <div className="select-size">
                 <label>Choose Array Size</label>
                 <Slider
@@ -41,9 +40,7 @@ const BubbleVis = () => {
             <div>
                 {console.log('arr', arr)}
                 {barHeight.map((val, i) => (
-                    <div>
-                        {/* {console.log('butthole', val)} */}
-                    </div>
+                    <div className="array-bar" key={i} style={{ height: `${val}px`, backgroundColor: 'blueviolet' }}></div>
                 ))}
             </div>
             <div onClick={(e) => bubbleSorter(e)}>Bubble Sort</div>

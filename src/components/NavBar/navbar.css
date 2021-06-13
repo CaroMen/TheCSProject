@@ -3,9 +3,11 @@ html, body {
     margin: 0 120px;
 }
 
-/* .nav-outer {
-
-} */
+.nav-outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
 
 .logo {
     font-family: 'Montserrat', sans-serif;
