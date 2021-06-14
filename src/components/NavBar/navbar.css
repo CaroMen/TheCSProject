@@ -30,5 +30,30 @@ html, body {
 
 .bubble-sort:hover {
     border-left: 2px solid #c2b0be;
-    padding-right: 20px;
+    padding-left: 5px;
+    /* margin-left: 40px; */
+}
+
+.insertion-sort:hover {
+    border-left: 2px solid #c2b0be;
+    padding-left: 5px;
+    /* margin-left: 40px; */
+}
+
+.selection-sort:hover {
+    border-left: 2px solid #c2b0be;
+    padding-left: 5px;
+    /* margin-left: 40px; */
+}
+
+.quick-sort:hover {
+    border-left: 2px solid #c2b0be;
+    padding-left: 5px;
+    /* margin-left: 40px; */
+}
+
+.merge-sort:hover {
+    border-left: 2px solid #c2b0be;
+    padding-left: 5px;
+    /* margin-left: 40px; */
 }

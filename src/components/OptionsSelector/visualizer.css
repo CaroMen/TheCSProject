@@ -10,14 +10,15 @@
     display: inline-block;
     margin: 0px 3px;
     width: 10px;
+    border-radius: 10px;
 }
 
 .select-size {
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .sort-btn {
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     color: #2E3630;
     background-color: #f1f1f1;
     padding-top: 10px;
@@ -50,40 +51,40 @@
 }
 
 .sort-title {
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     color: #2E3630;
 }
 
 .bubble-desc {
     width: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     color: #2E3630;
     margin-bottom: 20px;
 }
 
 .arr-ex{
     width: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     color: #2E3630;
     margin-bottom: 20px;
     margin-left: 40px;
 }
 
 .space-complexity {
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     color: #2E3630;
     font-size: 16px;
     margin-top: 16px;
 }
 
 .complexity {
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     color: #2E3630;
     font-size: 16px;
 }
 
 .complexity-ans {
-    font-family: 'Lato', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     color: #2E3630;
     font-size: 14px;
     margin-bottom: 16px;
