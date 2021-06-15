@@ -22,13 +22,18 @@ const helper = (arr, start, end, animations) => {
 
             swap(arr, left, right);
         } else {
-            animations.push([[left, arr[left]], right, arr[right]]);
+            animations.push([[left, arr[left]], [right, arr[right]]]);
 
+            animations.push([left, right]);
         }
 
-        if (arr[left] <= arr[pivot]) left++;
+        if (arr[left] <= arr[pivot]) {
+            left++;
+        }
 
-        if (arr[right] >= arr[pivot]) right--;
+        if (arr[right] >= arr[pivot]) {
+            right--;
+        }
     }
 
     animations.push([pivot, right]);

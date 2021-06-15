@@ -14,11 +14,12 @@
 }
 
 .select-size {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .sort-btn {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: regular;
     color: #2E3630;
     background-color: #f1f1f1;
     padding-top: 10px;
@@ -51,41 +52,50 @@
 }
 
 .sort-title {
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: #2E3630;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: regular;
+    color: #CDD9E5;
 }
 
 .bubble-desc {
     width: 100%;
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: #2E3630;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: regular;
+    color: #CDD9E5;
     margin-bottom: 20px;
+    line-height: 1.6rem;
 }
 
 .arr-ex{
     width: 100%;
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: #2E3630;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: regular;
+    color: #CDD9E5;
     margin-bottom: 20px;
     margin-left: 40px;
 }
 
 .space-complexity {
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: #2E3630;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #CDD9E5;
     font-size: 16px;
     margin-top: 16px;
+    margin-bottom: 5px;
 }
 
 .complexity {
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: #2E3630;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #CDD9E5;
     font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .complexity-ans {
-    font-family: 'IBM Plex Sans', sans-serif;
-    color: #2E3630;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: regular;
+    color: #CDD9E5;
     font-size: 14px;
     margin-bottom: 16px;
 }

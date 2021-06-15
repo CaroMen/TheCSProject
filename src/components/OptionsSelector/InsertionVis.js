@@ -63,7 +63,7 @@ const InsertionVis = () => {
             </div>
             <div>
                 {array.map((val, i) => (
-                    <div className="array-bar" key={i} style={{ height: `${val}px`, backgroundColor: '#ECD8E0' }}></div>
+                    <div className="array-bar" key={i} style={{ height: `${val}px`, backgroundColor: '#BB86FC' }}></div>
                 ))}
             </div>
             <div className="sort-btn" onClick={(e) => insertionSorter(e)}>Insertion Sort</div>

@@ -15,7 +15,7 @@ const NavBar = () => {
     return (
         <div className="nav-outer">
             <h3 className="logo">The CS Project</h3>
-            <Accordion allowZeroExpanded>
+            <Accordion >
                 <AccordionItem>
                     <div className="dropdown-nav">
                         <AccordionItemHeading>
@@ -23,19 +23,19 @@ const NavBar = () => {
                                 <div className="link-header">Sorting Algorithms </div>
                             </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel>
+                        <AccordionItemPanel className="link">
                             <NavLink className="nav-link bubble-sort" to="/bubble-sort">Bubble Sort Visualizer</NavLink>
                         </AccordionItemPanel>
-                        <AccordionItemPanel>
+                        <AccordionItemPanel className="link">
                             <NavLink className="nav-link insertion-sort" to="/insertion-sort">Insertion Sort Visualizer</NavLink>
                         </AccordionItemPanel>
-                        <AccordionItemPanel>
+                        <AccordionItemPanel className="link">
                             <NavLink className="nav-link selection-sort" to="/selection-sort">Selection Sort Visualizer</NavLink>
                         </AccordionItemPanel>
-                        <AccordionItemPanel>
+                        <AccordionItemPanel className="link">
                             <NavLink className="nav-link quick-sort" to="/quick-sort">Quick Sort Visualizer</NavLink>
                         </AccordionItemPanel>
-                        <AccordionItemPanel>
+                        <AccordionItemPanel className="link">
                             <NavLink className="nav-link merge-sort" to="/merge-sort">Merge Sort Visualizer</NavLink>
                         </AccordionItemPanel>
                     </div>

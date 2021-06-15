@@ -10,7 +10,7 @@ const animator = (animation) => {
             const barOneStyle = bars[barOneIdx].style;
             const barTwoStyle = bars[barTwoIdx].style;
 
-            const color = i % 3 === 0 ? '#FFD5B6' : '#ECD8E0';
+            const color = i % 3 === 0 ? '#03DAC6' : '#BB86FC';
 
             setTimeout(() => {
                 barOneStyle.backgroundColor = color;

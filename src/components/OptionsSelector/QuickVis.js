@@ -29,19 +29,6 @@ const QuickVis = () => {
 
     return (
         <div className="visualizer-container">
-            <div className="sort-desc">
-                <h3 className="sort-title">Selection Sort</h3>
-                <div className="bubble-desc">This sort algorithm is another simple one. This time however, we don't compare the first two numbers that are side by side.</div>
-
-                <div className="bubble-desc">We start out with the first number and check the rest of the array to see if there's a number smaller than the first number. If there is, we swap the two. Then we move to the second number and check the rest of the array to see if there's a number smaller than the second number. If there is we swap them. If there isn't, we leave the second number there and move on to the third number. We continue this pattern until the entire array is sorted.</div>
-
-                <div className="complexity-desc">
-                    <div className="complexity">Time Complexity:</div>
-                    <div className="complexity-ans">O(n^2)</div>
-                    <div className="space-complexity">Space Complexity:</div>
-                    <div className="complexity-ans">O(1)</div>
-                </div>
-            </div>
             <div className="select-size">
                 <label>Choose array size to display the sorting visualizer:</label>
                 <Slider
@@ -53,10 +40,10 @@ const QuickVis = () => {
             </div>
             <div>
                 {array.map((val, i) => (
-                    <div className="array-bar" key={i} style={{ height: `${val}px`, backgroundColor: '#ECD8E0' }}></div>
+                    <div className="array-bar" key={i} style={{ height: `${val}px`, backgroundColor: '#BB86FC' }}></div>
                 ))}
             </div>
-            <div className="sort-btn" onClick={(e) => quickSorter(e)}>Selection Sort</div>
+            <div className="sort-btn" onClick={(e) => quickSorter(e)}>Quick Sort</div>
         </div>
     )
 }
