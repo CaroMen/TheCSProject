@@ -23,7 +23,7 @@ const NavBar = () => {
                                 <div className="link-header">Sorting Algorithms </div>
                             </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel className="link">
+                        <AccordionItemPanel className="top-link">
                             <NavLink className="nav-link bubble-sort" to="/bubble-sort">Bubble Sort Visualizer</NavLink>
                         </AccordionItemPanel>
                         <AccordionItemPanel className="link">

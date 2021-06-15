@@ -28,6 +28,11 @@ html, body {
     margin-left: 40px;
 }
 
+.top-link {
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
 .link {
     margin-bottom: 6px;
 }
@@ -35,29 +40,34 @@ html, body {
 .bubble-sort:hover {
     border-left: 2px solid #c2b0be;
     padding-left: 5px;
+    color: #BB86FC;
     /* margin-left: 40px; */
 }
 
 .insertion-sort:hover {
     border-left: 2px solid #c2b0be;
     padding-left: 5px;
+    color: #BB86FC;
     /* margin-left: 40px; */
 }
 
 .selection-sort:hover {
     border-left: 2px solid #c2b0be;
     padding-left: 5px;
+    color: #BB86FC;
     /* margin-left: 40px; */
 }
 
 .quick-sort:hover {
     border-left: 2px solid #c2b0be;
     padding-left: 5px;
+    color: #BB86FC;
     /* margin-left: 40px; */
 }
 
 .merge-sort:hover {
     border-left: 2px solid #c2b0be;
     padding-left: 5px;
+    color: #BB86FC;
     /* margin-left: 40px; */
 }
